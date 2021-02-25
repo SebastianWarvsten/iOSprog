@@ -14,6 +14,7 @@
 		48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */; };
 		48298AE125E696B7008F5388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE025E696B7008F5388 /* Assets.xcassets */; };
 		48298AE425E696B7008F5388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE225E696B7008F5388 /* LaunchScreen.storyboard */; };
+		48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48716F8325E7C8F90001149F /* RegisterViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		48298AE025E696B7008F5388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48298AE325E696B7008F5388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48298AE525E696B7008F5388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		48716F8325E7C8F90001149F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 		48298AD325E696B6008F5388 /* WestcostEducationLab */ = {
 			isa = PBXGroup;
 			children = (
+				48716F8225E7C8E50001149F /* ViewControllers */,
 				48298AD425E696B6008F5388 /* AppDelegate.swift */,
 				48298AD625E696B6008F5388 /* SceneDelegate.swift */,
 				48298AD825E696B6008F5388 /* ViewController.swift */,
@@ -68,6 +71,14 @@
 				48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */,
 			);
 			path = WestcostEducationLab;
+			sourceTree = "<group>";
+		};
+		48716F8225E7C8E50001149F /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				48716F8325E7C8F90001149F /* RegisterViewController.swift */,
+			);
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */,
+				48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */,
 				48298AD925E696B6008F5388 /* ViewController.swift in Sources */,
 				48298AD525E696B6008F5388 /* AppDelegate.swift in Sources */,
 				48298AD725E696B6008F5388 /* SceneDelegate.swift in Sources */,
