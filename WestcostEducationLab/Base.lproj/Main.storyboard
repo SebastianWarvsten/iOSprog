@@ -245,7 +245,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="emainTextField" destination="enl-6c-G7S" id="r0J-u5-ibf"/>
+                        <outlet property="emailTextField" destination="enl-6c-G7S" id="7g3-of-hcR"/>
                         <outlet property="firstNameTextfield" destination="HHl-ex-b29" id="vyh-oB-ZrA"/>
                         <outlet property="lastNameTextfield" destination="i2l-r0-1i9" id="X3j-zO-HKm"/>
                         <outlet property="passwordTextfield" destination="yaC-yi-OeZ" id="Z88-rF-7zy"/>
