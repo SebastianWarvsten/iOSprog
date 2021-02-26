@@ -8,10 +8,10 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Login View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="WestcostEducationLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoginViewController" customModule="WestcostEducationLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -35,7 +35,7 @@
                                     <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
-                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7LF-NZ-Ons"/>
+                                    <action selector="loginButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EjE-iw-z1v"/>
                                 </connections>
                             </button>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email address" textAlignment="natural" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="ajk-TZ-dJB">
@@ -64,8 +64,7 @@
                                     <color key="titleColor" systemColor="systemTealColor"/>
                                 </state>
                                 <connections>
-                                    <action selector="createAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="inJ-Ka-0Gs"/>
-                                    <segue destination="dJH-Yn-0P5" kind="presentation" id="fhS-T4-Yqn"/>
+                                    <segue destination="dJH-Yn-0P5" kind="presentation" identifier="registerSeguei" id="Ask-ra-1uJ"/>
                                 </connections>
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Don't have an account?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bST-bO-7TQ">
@@ -121,8 +120,8 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="passwordTextField" destination="Cel-JW-cfF" id="OHU-Gm-ch7"/>
-                        <outlet property="usernameTextField" destination="ajk-TZ-dJB" id="FNN-dy-khx"/>
+                        <outlet property="emailTextField" destination="ajk-TZ-dJB" id="ydh-sF-HpR"/>
+                        <outlet property="passwordTextField" destination="Cel-JW-cfF" id="E1g-Vc-aHV"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

@@ -9,25 +9,31 @@
 /* Begin PBXBuildFile section */
 		48298AD525E696B6008F5388 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48298AD425E696B6008F5388 /* AppDelegate.swift */; };
 		48298AD725E696B6008F5388 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48298AD625E696B6008F5388 /* SceneDelegate.swift */; };
-		48298AD925E696B6008F5388 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48298AD825E696B6008F5388 /* ViewController.swift */; };
 		48298ADC25E696B6008F5388 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48298ADA25E696B6008F5388 /* Main.storyboard */; };
 		48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */; };
 		48298AE125E696B7008F5388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE025E696B7008F5388 /* Assets.xcassets */; };
 		48298AE425E696B7008F5388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE225E696B7008F5388 /* LaunchScreen.storyboard */; };
 		48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48716F8325E7C8F90001149F /* RegisterViewController.swift */; };
+		48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */; };
+		48922E8925E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */; };
+		48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */; };
+		48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8D25E8FA93008D4CB5 /* UserModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		48298AD125E696B6008F5388 /* WestcostEducationLab.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WestcostEducationLab.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		48298AD425E696B6008F5388 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		48298AD625E696B6008F5388 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		48298AD825E696B6008F5388 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		48298ADB25E696B6008F5388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		48298ADE25E696B6008F5388 /* WestcostEducationLab.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = WestcostEducationLab.xcdatamodel; sourceTree = "<group>"; };
 		48298AE025E696B7008F5388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48298AE325E696B7008F5388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48298AE525E696B7008F5388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		48716F8325E7C8F90001149F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
+		48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		48922E8D25E8FA93008D4CB5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,15 +66,15 @@
 		48298AD325E696B6008F5388 /* WestcostEducationLab */ = {
 			isa = PBXGroup;
 			children = (
+				48922E8625E8F9DF008D4CB5 /* Data */,
+				48922E8C25E8FA6C008D4CB5 /* Models */,
 				48716F8225E7C8E50001149F /* ViewControllers */,
 				48298AD425E696B6008F5388 /* AppDelegate.swift */,
 				48298AD625E696B6008F5388 /* SceneDelegate.swift */,
-				48298AD825E696B6008F5388 /* ViewController.swift */,
 				48298ADA25E696B6008F5388 /* Main.storyboard */,
 				48298AE025E696B7008F5388 /* Assets.xcassets */,
 				48298AE225E696B7008F5388 /* LaunchScreen.storyboard */,
 				48298AE525E696B7008F5388 /* Info.plist */,
-				48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */,
 			);
 			path = WestcostEducationLab;
 			sourceTree = "<group>";
@@ -77,8 +83,27 @@
 			isa = PBXGroup;
 			children = (
 				48716F8325E7C8F90001149F /* RegisterViewController.swift */,
+				48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		48922E8625E8F9DF008D4CB5 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */,
+				48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */,
+				48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		48922E8C25E8FA6C008D4CB5 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				48922E8D25E8FA93008D4CB5 /* UserModel.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -151,9 +176,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */,
+				48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */,
+				48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */,
 				48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */,
+				48922E8925E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift in Sources */,
 				48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */,
-				48298AD925E696B6008F5388 /* ViewController.swift in Sources */,
 				48298AD525E696B6008F5388 /* AppDelegate.swift in Sources */,
 				48298AD725E696B6008F5388 /* SceneDelegate.swift in Sources */,
 			);

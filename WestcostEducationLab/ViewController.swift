@@ -18,10 +18,7 @@ class ViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
 
-    @IBAction func loginButton(_ sender: UIButton) {
-    }
-    @IBAction func createAccountButton(_ sender: UIButton) {
-    }
+
     
 }
 
