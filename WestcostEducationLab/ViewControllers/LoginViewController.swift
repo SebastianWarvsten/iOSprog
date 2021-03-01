@@ -24,6 +24,7 @@ class LoginViewController: UIViewController {
     }
     
     @IBAction func loginButton(_ sender: UIButton) {
+        // hämtar från coreData
         let userEmail = emailTextField.text
         let userPassword = passwordTextField.text
         
@@ -31,16 +32,10 @@ class LoginViewController: UIViewController {
         
         if userEmail == user.email && userPassword == user.password {
             print("Du är nu inloggad")
+            performSegue(withIdentifier: "loginSegue", sender: self)
         } else {
             print("Det fungerade inte att logga in")
         }
-        //läsa sparade email och password
-//        let userEmailStored = hämta från core data
-//        let userPasswordStored = hämta från core data
-//
-//        if userEmailStored == userEmal && userPasswordStored = userPassword {
-//
-//        }
     }
     func loadUser(){
         

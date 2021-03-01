@@ -12,6 +12,7 @@ class RegisterViewController: UIViewController {
     @IBOutlet weak var firstNameTextfield: UITextField!
     @IBOutlet weak var lastNameTextfield: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
+    @IBOutlet weak var phoneNumberTextField: UITextField!
     @IBOutlet weak var passwordTextfield: UITextField!
     @IBOutlet weak var repeatPasswordTextfield: UITextField!
     
@@ -23,10 +24,13 @@ class RegisterViewController: UIViewController {
         let tapGesture = UITapGestureRecognizer(target: view, action: #selector(UIView.endEditing))
         view.addGestureRecognizer(tapGesture)
     }
+    
+    //MARK: If user.email already excist show error message "User 'email' already excist"
     @IBAction func registerButton(_ sender: UIButton) {
         let firstName = firstNameTextfield.text
         let lastName = lastNameTextfield.text
         let email = emailTextField.text
+        let phoneNumber = Int(phoneNumberTextField.text!)
         let password = passwordTextfield.text
         let repeatPassword = repeatPasswordTextfield.text
         
@@ -40,7 +44,7 @@ class RegisterViewController: UIViewController {
         }
         
         //Store data in core data
-        let newUser = UserModel(email: email!, firstname: firstName!, lastname: lastName!, password: password!, phonenumber: 123456789)
+        let newUser = UserModel(email: email!, firstname: firstName!, lastname: lastName!, password: password!, phonenumber: phoneNumber!)
         save(user: newUser)
         
         //Dismiss the popver and show success message
