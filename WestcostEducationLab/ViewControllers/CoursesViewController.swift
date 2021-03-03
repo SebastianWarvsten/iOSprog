@@ -28,24 +28,20 @@ class CoursesViewController: UIViewController {
     
     func createArray() -> [CoursesModel] {
         var tempItem: [CoursesModel] = []
-        for c in webCourses {
-            let item = CoursesModel(title: categories[0], label: c)
-            tempItem.append(item)
-        }
-        for c in progCourses {
-            let item = CoursesModel(title: categories[1], label: c)
-            tempItem.append(item)
-        }
-        for c in backCourses {
-            let item = CoursesModel(title: categories[2], label: c)
-            tempItem.append(item)
-        }
-        for c in dataCourses {
-            let item = CoursesModel(title: categories[3], label: c)
-            tempItem.append(item)
-        }
-        
+        tempItem.append(contentsOf: insertAllArrayInfo(course: webCourses, categoryNumber: 0 ))
+        tempItem.append(contentsOf: insertAllArrayInfo(course: progCourses, categoryNumber: 1))
+        tempItem.append(contentsOf: insertAllArrayInfo(course: backCourses, categoryNumber: 2))
+        tempItem.append(contentsOf: insertAllArrayInfo(course: dataCourses, categoryNumber: 3))
         return tempItem
+    }
+    
+    func insertAllArrayInfo(course: [String], categoryNumber: Int) -> [CoursesModel]{
+        var tempCourseItem: [CoursesModel] = []
+            for c in course {
+                let courseItem = CoursesModel(title: categories[categoryNumber], label: c)
+                tempCourseItem.append(courseItem)
+            }
+        return tempCourseItem
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
