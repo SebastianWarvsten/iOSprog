@@ -11,7 +11,8 @@ class CoursesViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
-    var items: [CoursesModel] = []
+    var items: [CoursesModel] = [CoursesModel]()
+    
     let categories = ["Webbutveckling", "Programmeringförmobilaenheter", "Backendprogrammering", "Databaser"]
     let webCourses = ["HTML och CSS", "Avancerad CSS", "JavaScript för nybörjare", "Avancerad JavaScript och serverprogrammering", "JavaScript för webben", "ASP.NET Core MVC"]
     let progCourses = ["Introduktion till Android programmering", "Avancerad Android programmering", "iOS utveckling med Objective-C", "iOS utveckling med Swift", "Design och layout för mobila enheter"]
@@ -47,8 +48,6 @@ class CoursesViewController: UIViewController {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-    
-    
 }
 
 extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
@@ -65,5 +64,24 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
         cell.setItem(item: course)
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let item = items[indexPath.row]
+        let itemTuple = (indexPath.row, item)
+        
+        performSegue(withIdentifier: "showCourseDetail", sender: itemTuple)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+
+        if segue.identifier == "showCourseDetail" {
+
+            guard let vc = segue.destination as? CoursesDetailViewController else { return }
+            guard let item = sender as? (Int, CoursesModel) else { return }
+
+            vc.item = item.1
+            vc.itemIndex = item.0
+        }
     }
 }

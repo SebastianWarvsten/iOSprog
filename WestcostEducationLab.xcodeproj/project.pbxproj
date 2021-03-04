@@ -13,6 +13,7 @@
 		48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */; };
 		48298AE125E696B7008F5388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE025E696B7008F5388 /* Assets.xcassets */; };
 		48298AE425E696B7008F5388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE225E696B7008F5388 /* LaunchScreen.storyboard */; };
+		486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */; };
 		487062B825ED76CF0073B076 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062B725ED76CF0073B076 /* CoursesTableViewCell.swift */; };
 		487062BB25ED78710073B076 /* CoursesModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062BA25ED78710073B076 /* CoursesModel.swift */; };
 		487062BE25ED78EE0073B076 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062BD25ED78EE0073B076 /* CoursesViewController.swift */; };
@@ -32,6 +33,7 @@
 		48298AE025E696B7008F5388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48298AE325E696B7008F5388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48298AE525E696B7008F5388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDetailViewController.swift; sourceTree = "<group>"; };
 		487062B725ED76CF0073B076 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		487062BA25ED78710073B076 /* CoursesModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesModel.swift; sourceTree = "<group>"; };
 		487062BD25ED78EE0073B076 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 				48716F8325E7C8F90001149F /* RegisterViewController.swift */,
 				48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */,
 				487062BD25ED78EE0073B076 /* CoursesViewController.swift */,
+				486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -187,6 +190,7 @@
 			files = (
 				48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */,
 				48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */,
+				486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */,
 				48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */,
 				487062BB25ED78710073B076 /* CoursesModel.swift in Sources */,
 				487062B825ED76CF0073B076 /* CoursesTableViewCell.swift in Sources */,
