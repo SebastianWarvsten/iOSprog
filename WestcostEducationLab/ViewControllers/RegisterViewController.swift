@@ -26,6 +26,9 @@ class RegisterViewController: UIViewController {
     }
     
     //MARK: If user.email already excist show error message "User 'email' already excist"
+    @IBAction func exitButton(_ sender: UIButton) {
+            self.dismiss(animated: true, completion: nil)
+    }
     @IBAction func registerButton(_ sender: UIButton) {
         let firstName = firstNameTextfield.text
         let lastName = lastNameTextfield.text

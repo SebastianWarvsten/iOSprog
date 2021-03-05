@@ -22,6 +22,7 @@
 		48922E8925E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */; };
 		48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */; };
 		48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8D25E8FA93008D4CB5 /* UserModel.swift */; };
+		48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -42,6 +43,7 @@
 		48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		48922E8D25E8FA93008D4CB5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,6 +96,7 @@
 				48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */,
 				487062BD25ED78EE0073B076 /* CoursesViewController.swift */,
 				486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */,
+				48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,6 +191,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */,
 				48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */,
 				48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */,
 				486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */,
