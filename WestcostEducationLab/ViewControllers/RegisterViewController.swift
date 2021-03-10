@@ -48,7 +48,7 @@ class RegisterViewController: UIViewController {
         
         //Store data in core data
         let newUser = UserModel(email: email!, firstname: firstName!, lastname: lastName!, password: password!, phonenumber: phoneNumber!)
-        save(user: newUser)
+        save(user: [newUser])
         
         //Dismiss the popver and show success message
         let myAlert = UIAlertController(title: "Congratulations", message: "Registration successfull!", preferredStyle: UIAlertController.Style.alert)
@@ -65,14 +65,16 @@ class RegisterViewController: UIViewController {
         self.present(myAlert, animated: true, completion: nil)
     }
     
-    func save(user: UserModel){
-        let userAcount = UserAccount(context: context)
-        userAcount.email = user.email
-        userAcount.firstname = user.firstname
-        userAcount.lastname = user.lastname
-        userAcount.password = user.password
-        userAcount.phonenumber = Int32(user.phonenumber)
-        
+    func save(user: [UserModel]){
+        for u in user{
+            let userAcount = UserAccount(context: context)
+            userAcount.email = u.email
+            userAcount.firstname = u.firstname
+            userAcount.lastname = u.lastname
+            userAcount.password = u.password
+            userAcount.phonenumber = Int32(u.phonenumber)
+        }
+
         do{
             try context.save()
             print("New user saved in coreData")
