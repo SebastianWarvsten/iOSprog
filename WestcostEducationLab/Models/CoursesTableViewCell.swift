@@ -12,8 +12,8 @@ class CoursesTableViewCell: UITableViewCell {
     @IBOutlet weak var courseTableLabel: UILabel!
     @IBOutlet weak var courseSubLabel: UILabel!
     
-    func setItem(item: CoursesModel){
+    func setItem(item: UserCourseModel){
         courseTableLabel.text = item.title
-        courseSubLabel.text = item.label
+        courseSubLabel.text = item.subtitle
     }
 }

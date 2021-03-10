@@ -257,7 +257,6 @@
                                         <connections>
                                             <outlet property="courseSubLabel" destination="UKW-KK-NNc" id="DGW-OT-hDC"/>
                                             <outlet property="courseTableLabel" destination="Jzx-Ch-CqK" id="VE4-Ju-Fpm"/>
-                                            <segue destination="Pq9-h2-WjY" kind="show" identifier="showMyCourseDetails" id="Kvy-JU-3Jc"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -276,6 +275,7 @@
                     <navigationItem key="navigationItem" id="v3k-rm-ETd"/>
                     <connections>
                         <outlet property="tableView" destination="u49-nZ-JhD" id="u3v-RU-PIR"/>
+                        <segue destination="Pq9-h2-WjY" kind="show" identifier="showMyCourseDetails" id="Qg1-Er-h58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm1-IV-Pee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -309,16 +309,48 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xrz-te-bvu">
+                                <rect key="frame" x="344" y="802" width="20" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="20" id="S0y-gR-ISu"/>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="20" id="V6t-ml-WeA"/>
+                                    <constraint firstAttribute="height" relation="lessThanOrEqual" constant="20" id="WV4-Zo-muS"/>
+                                    <constraint firstAttribute="width" constant="20" id="YM0-tg-zeH"/>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="20" id="iOC-bD-tFa"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="20" id="uaq-FX-QTb"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="systemGreenColor"/>
+                                <state key="normal" title="Button" image="plus.circle.fill" catalog="system"/>
+                                <connections>
+                                    <action selector="addToWishlistButton:" destination="Pq9-h2-WjY" eventType="touchUpInside" id="I1l-FI-b92"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add to wishlist" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EXR-QL-Pzv">
+                                <rect key="frame" x="293" y="774" width="111" height="20"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="111" id="KfP-pL-ihV"/>
+                                    <constraint firstAttribute="height" constant="20" id="rlm-Lx-SPl"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="JNO-fI-umd"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="JNO-fI-umd" firstAttribute="trailing" secondItem="PC0-DZ-p7r" secondAttribute="trailing" id="1qz-Lt-KRx"/>
                             <constraint firstItem="JNO-fI-umd" firstAttribute="trailing" secondItem="4kc-wn-FI2" secondAttribute="trailing" constant="10" id="2nh-76-RLJ"/>
+                            <constraint firstItem="JNO-fI-umd" firstAttribute="trailing" secondItem="xrz-te-bvu" secondAttribute="trailing" constant="50" id="7i4-bV-EFj"/>
+                            <constraint firstItem="xrz-te-bvu" firstAttribute="top" secondItem="EXR-QL-Pzv" secondAttribute="bottom" constant="8" id="FtG-CR-bVW"/>
+                            <constraint firstItem="JNO-fI-umd" firstAttribute="bottom" secondItem="xrz-te-bvu" secondAttribute="bottom" constant="40" id="Luj-PN-kii"/>
+                            <constraint firstItem="JNO-fI-umd" firstAttribute="trailing" secondItem="xrz-te-bvu" secondAttribute="trailing" constant="50" id="SOb-nE-Eqg"/>
                             <constraint firstItem="4kc-wn-FI2" firstAttribute="top" secondItem="PC0-DZ-p7r" secondAttribute="bottom" constant="20" id="SPx-Yc-9AP"/>
                             <constraint firstItem="PC0-DZ-p7r" firstAttribute="top" secondItem="JNO-fI-umd" secondAttribute="top" constant="20" id="WCl-fq-g1J"/>
                             <constraint firstItem="4kc-wn-FI2" firstAttribute="leading" secondItem="JNO-fI-umd" secondAttribute="leading" constant="10" id="aDT-oT-Krv"/>
                             <constraint firstItem="PC0-DZ-p7r" firstAttribute="leading" secondItem="JNO-fI-umd" secondAttribute="leading" id="nZq-zU-QKq"/>
+                            <constraint firstItem="JNO-fI-umd" firstAttribute="trailing" secondItem="EXR-QL-Pzv" secondAttribute="trailing" constant="10" id="thM-PH-PTd"/>
+                            <constraint firstItem="JNO-fI-umd" firstAttribute="bottom" secondItem="xrz-te-bvu" secondAttribute="bottom" constant="40" id="y5f-nF-wuS"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="uOP-ub-rYh"/>
@@ -329,7 +361,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BTj-Pn-6BY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4096" y="75"/>
+            <point key="canvasLocation" x="4095.652173913044" y="75"/>
         </scene>
         <!--Register View Controller-->
         <scene sceneID="yEw-7f-62i">
@@ -525,17 +557,21 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Kvy-JU-3Jc"/>
+        <segue reference="Qg1-Er-h58"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>
         <image name="books.vertical" catalog="system" width="128" height="103"/>
+        <image name="plus.circle.fill" catalog="system" width="128" height="121"/>
         <image name="xmark.circle" catalog="system" width="128" height="121"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGreenColor">
+            <color red="0.20392156862745098" green="0.7803921568627451" blue="0.34901960784313724" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
         <systemColor name="systemTealColor">
             <color red="0.35294117647058826" green="0.78431372549019607" blue="0.98039215686274506" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>

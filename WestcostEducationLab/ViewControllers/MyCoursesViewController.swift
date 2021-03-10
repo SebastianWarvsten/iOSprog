@@ -6,48 +6,45 @@
 //
 
 import UIKit
+import CoreData
 
-class MyCoursesViewController: UIViewController {
+class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
-    var courses: [CoursesModel] = [CoursesModel]()
     
-    let categories = ["Webbutveckling", "Programmeringförmobilaenheter", "Backendprogrammering", "Databaser"]
-    let webCourses = ["HTML och CSS", "Avancerad CSS", "JavaScript för nybörjare", "Avancerad JavaScript och serverprogrammering", "JavaScript för webben", "ASP.NET Core MVC"]
+    var courses: [UserCourseModel] = [UserCourseModel]()
+    let context = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        courses = createArray()
         
+        setupCoursesList()
+        tableView.reloadData()
         tableView.delegate = self
         tableView.dataSource = self
     }
-    //MARK: Create Arraylist of my courses
-    func createArray() -> [CoursesModel] {
-        var tempItem: [CoursesModel] = []
-        tempItem.append(contentsOf: insertAllArrayInfo(course: webCourses, categoryNumber: 0 ))
-//        tempItem.append(contentsOf: insertAllArrayInfo(course: progCourses, categoryNumber: 1))
-//        tempItem.append(contentsOf: insertAllArrayInfo(course: backCourses, categoryNumber: 2))
-//        tempItem.append(contentsOf: insertAllArrayInfo(course: dataCourses, categoryNumber: 3))
-        return tempItem
-    }
+    
+    //MARK: Setup list of courses from CoreData
+    func setupCoursesList(){
 
-    func insertAllArrayInfo(course: [String], categoryNumber: Int) -> [CoursesModel]{
-        var tempCourseItem: [CoursesModel] = []
-            for c in course {
-                let courseItem = CoursesModel(title: categories[categoryNumber], label: c)
-                tempCourseItem.append(courseItem)
+        if let coursesFromCoreData = try? context.fetch(UserCourses.fetchRequest()) as? [UserCourses]{
+
+            for c in coursesFromCoreData {
+                let usercourses = UserCourseModel(title: c.title ?? "",
+                                              label: c.subtitle ?? "")
+
+                print("Setting up MyTableView")
+                courses.append(usercourses)
+                tableView.reloadData()
             }
-        return tempCourseItem
+        }
     }
     
+    //MARK: Setup table view
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 80
     }
-}
-
-extension MyCoursesViewController: UITableViewDataSource, UITableViewDelegate {
-    //MARK: Setup table view
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return courses.count
     }
@@ -61,6 +58,7 @@ extension MyCoursesViewController: UITableViewDataSource, UITableViewDelegate {
         
         return cell
     }
+    
     //MARK: Move to next page with information
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let item = courses[indexPath.row]
@@ -74,10 +72,35 @@ extension MyCoursesViewController: UITableViewDataSource, UITableViewDelegate {
         if segue.identifier == "showMyCourseDetails" {
 
             guard let vc = segue.destination as? CoursesDetailViewController else { return }
-            guard let item = sender as? (Int, CoursesModel) else { return }
+            guard let item = sender as? (Int, UserCourseModel) else { return }
 
             vc.item = item.1
             vc.itemIndex = item.0
+            
         }
+    }
+    
+    //MARK: Delete rows
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        UISwipeActionsConfiguration(actions: [deleteCourseAction(forRowAt: indexPath)])
+    }
+
+    func deleteCourseAction(forRowAt indexPath: IndexPath) -> UIContextualAction{
+        let action = UIContextualAction(style: .destructive, title: "Delete") {
+            (UIContextualAction, swipeButton, completionHandler: (Bool)-> Void) in
+            let coursesFromCoreData = try? self.context.fetch(UserCourses.fetchRequest()) as? [UserCourses]
+            
+            self.context.delete(coursesFromCoreData![indexPath.row])
+
+            do{
+                try self.context.save()
+                print("Item was successfully deleted from Wishlist")
+            } catch {
+                print("Det gick inget bra det här heller")
+            }
+            self.courses.remove(at: indexPath.row)
+            self.tableView.reloadData()
+        }
+        return action
     }
 }

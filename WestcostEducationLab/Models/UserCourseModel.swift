@@ -8,12 +8,12 @@
 import Foundation
 import UIKit
 
-class CoursesModel {
+class UserCourseModel {
     var title: String
-    var label: String
+    var subtitle: String
     
     init(title: String, label: String) {
         self.title = title
-        self.label = label
+        self.subtitle = label
     }
 }
