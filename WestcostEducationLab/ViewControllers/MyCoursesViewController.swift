@@ -14,14 +14,33 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
     
     var courses: [UserCourseModel] = [UserCourseModel]()
     let context = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
-    
+        
     override func viewDidLoad() {
         super.viewDidLoad()
         
         setupCoursesList()
-        tableView.reloadData()
+        
         tableView.delegate = self
         tableView.dataSource = self
+        tableView.addSubview(self.refreshControl)
+    }
+    
+    //MARK: Refresh
+    lazy var refreshControl: UIRefreshControl = {
+            let refreshControl = UIRefreshControl()
+            refreshControl.addTarget(self, action:
+                         #selector(MyCoursesViewController.refresh(_:)),
+                                     for: UIControl.Event.valueChanged)
+            refreshControl.tintColor = UIColor.green
+            
+            return refreshControl
+        }()
+    @objc func refresh(_ refreshControl: UIRefreshControl) {
+        courses.removeAll()
+        setupCoursesList()
+        
+        tableView.reloadData()
+        refreshControl.endRefreshing()
     }
     
     //MARK: Setup list of courses from CoreData
@@ -32,11 +51,10 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
             for c in coursesFromCoreData {
                 let usercourses = UserCourseModel(title: c.title ?? "",
                                               label: c.subtitle ?? "")
-
-                print("Setting up MyTableView")
                 courses.append(usercourses)
                 tableView.reloadData()
             }
+            print("Setting up MyTableView")
         }
     }
     
