@@ -24,6 +24,13 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.addSubview(self.refreshControl)
     }
     
+    //Mark: Autorefresh
+    override func viewDidAppear(_ animated: Bool) {
+        courses.removeAll()
+        setupCoursesList()
+        tableView.reloadData()
+    }
+    
     //MARK: Refresh
     lazy var refreshControl: UIRefreshControl = {
             let refreshControl = UIRefreshControl()
