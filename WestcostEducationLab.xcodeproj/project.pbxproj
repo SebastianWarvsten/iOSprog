@@ -13,16 +13,16 @@
 		48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */; };
 		48298AE125E696B7008F5388 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE025E696B7008F5388 /* Assets.xcassets */; };
 		48298AE425E696B7008F5388 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 48298AE225E696B7008F5388 /* LaunchScreen.storyboard */; };
+		485A511025FD448E00ABC438 /* UserCourses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A510C25FD448E00ABC438 /* UserCourses+CoreDataClass.swift */; };
+		485A511125FD448E00ABC438 /* UserCourses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A510D25FD448E00ABC438 /* UserCourses+CoreDataProperties.swift */; };
+		485A511225FD448E00ABC438 /* UserAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A510E25FD448E00ABC438 /* UserAccount+CoreDataClass.swift */; };
+		485A511325FD448E00ABC438 /* UserAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 485A510F25FD448E00ABC438 /* UserAccount+CoreDataProperties.swift */; };
 		486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */; };
 		487062B825ED76CF0073B076 /* CoursesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062B725ED76CF0073B076 /* CoursesTableViewCell.swift */; };
 		487062BB25ED78710073B076 /* UserCourseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062BA25ED78710073B076 /* UserCourseModel.swift */; };
 		487062BE25ED78EE0073B076 /* CoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487062BD25ED78EE0073B076 /* CoursesViewController.swift */; };
 		48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48716F8325E7C8F90001149F /* RegisterViewController.swift */; };
-		487DB78725F63B3100DC6826 /* UserCourses+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DB78525F63B3100DC6826 /* UserCourses+CoreDataClass.swift */; };
-		487DB78825F63B3100DC6826 /* UserCourses+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 487DB78625F63B3100DC6826 /* UserCourses+CoreDataProperties.swift */; };
 		48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */; };
-		48922E8925E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */; };
-		48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */; };
 		48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8D25E8FA93008D4CB5 /* UserModel.swift */; };
 		48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */; };
 /* End PBXBuildFile section */
@@ -36,16 +36,16 @@
 		48298AE025E696B7008F5388 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		48298AE325E696B7008F5388 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		48298AE525E696B7008F5388 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		485A510C25FD448E00ABC438 /* UserCourses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCourses+CoreDataClass.swift"; path = "WestcostEducationLab/Data/UserCourses+CoreDataClass.swift"; sourceTree = "<group>"; };
+		485A510D25FD448E00ABC438 /* UserCourses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserCourses+CoreDataProperties.swift"; path = "WestcostEducationLab/Data/UserCourses+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		485A510E25FD448E00ABC438 /* UserAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserAccount+CoreDataClass.swift"; path = "WestcostEducationLab/Data/UserAccount+CoreDataClass.swift"; sourceTree = "<group>"; };
+		485A510F25FD448E00ABC438 /* UserAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "UserAccount+CoreDataProperties.swift"; path = "WestcostEducationLab/Data/UserAccount+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesDetailViewController.swift; sourceTree = "<group>"; };
 		487062B725ED76CF0073B076 /* CoursesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesTableViewCell.swift; sourceTree = "<group>"; };
 		487062BA25ED78710073B076 /* UserCourseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserCourseModel.swift; sourceTree = "<group>"; };
 		487062BD25ED78EE0073B076 /* CoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoursesViewController.swift; sourceTree = "<group>"; };
 		48716F8325E7C8F90001149F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
-		487DB78525F63B3100DC6826 /* UserCourses+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCourses+CoreDataClass.swift"; sourceTree = "<group>"; };
-		487DB78625F63B3100DC6826 /* UserCourses+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserCourses+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UserAccount+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		48922E8D25E8FA93008D4CB5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,6 +64,10 @@
 		48298AC825E696B6008F5388 = {
 			isa = PBXGroup;
 			children = (
+				485A510C25FD448E00ABC438 /* UserCourses+CoreDataClass.swift */,
+				485A510D25FD448E00ABC438 /* UserCourses+CoreDataProperties.swift */,
+				485A510E25FD448E00ABC438 /* UserAccount+CoreDataClass.swift */,
+				485A510F25FD448E00ABC438 /* UserAccount+CoreDataProperties.swift */,
 				48298AD325E696B6008F5388 /* WestcostEducationLab */,
 				48298AD225E696B6008F5388 /* Products */,
 			);
@@ -116,10 +120,6 @@
 		48922E8625E8F9DF008D4CB5 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				48922E8725E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift */,
-				48922E8825E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift */,
-				487DB78525F63B3100DC6826 /* UserCourses+CoreDataClass.swift */,
-				487DB78625F63B3100DC6826 /* UserCourses+CoreDataProperties.swift */,
 				48298ADD25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld */,
 			);
 			path = Data;
@@ -205,19 +205,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				485A511125FD448E00ABC438 /* UserCourses+CoreDataProperties.swift in Sources */,
+				485A511325FD448E00ABC438 /* UserAccount+CoreDataProperties.swift in Sources */,
 				48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */,
-				48922E8A25E8F9EF008D4CB5 /* UserAccount+CoreDataProperties.swift in Sources */,
 				48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */,
 				486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */,
 				48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */,
 				487062BB25ED78710073B076 /* UserCourseModel.swift in Sources */,
-				487DB78825F63B3100DC6826 /* UserCourses+CoreDataProperties.swift in Sources */,
 				487062B825ED76CF0073B076 /* CoursesTableViewCell.swift in Sources */,
-				487DB78725F63B3100DC6826 /* UserCourses+CoreDataClass.swift in Sources */,
 				48298ADF25E696B6008F5388 /* WestcostEducationLab.xcdatamodeld in Sources */,
-				48922E8925E8F9EF008D4CB5 /* UserAccount+CoreDataClass.swift in Sources */,
+				485A511225FD448E00ABC438 /* UserAccount+CoreDataClass.swift in Sources */,
 				48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */,
 				48298AD525E696B6008F5388 /* AppDelegate.swift in Sources */,
+				485A511025FD448E00ABC438 /* UserCourses+CoreDataClass.swift in Sources */,
 				48298AD725E696B6008F5388 /* SceneDelegate.swift in Sources */,
 				487062BE25ED78EE0073B076 /* CoursesViewController.swift in Sources */,
 			);

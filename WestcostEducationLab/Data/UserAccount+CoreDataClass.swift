@@ -2,7 +2,7 @@
 //  UserAccount+CoreDataClass.swift
 //  WestcostEducationLab
 //
-//  Created by Sebastian Warvsten on 2021-02-26.
+//  Created by Sebastian Warvsten on 2021-03-13.
 //
 //
 

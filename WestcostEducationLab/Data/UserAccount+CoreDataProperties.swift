@@ -2,7 +2,7 @@
 //  UserAccount+CoreDataProperties.swift
 //  WestcostEducationLab
 //
-//  Created by Sebastian Warvsten on 2021-02-26.
+//  Created by Sebastian Warvsten on 2021-03-13.
 //
 //
 
@@ -21,6 +21,24 @@ extension UserAccount {
     @NSManaged public var lastname: String?
     @NSManaged public var password: String?
     @NSManaged public var phonenumber: Int32
+    @NSManaged public var courses: NSSet?
+
+}
+
+// MARK: Generated accessors for courses
+extension UserAccount {
+
+    @objc(addCoursesObject:)
+    @NSManaged public func addToCourses(_ value: UserCourses)
+
+    @objc(removeCoursesObject:)
+    @NSManaged public func removeFromCourses(_ value: UserCourses)
+
+    @objc(addCourses:)
+    @NSManaged public func addToCourses(_ values: NSSet)
+
+    @objc(removeCourses:)
+    @NSManaged public func removeFromCourses(_ values: NSSet)
 
 }
 
