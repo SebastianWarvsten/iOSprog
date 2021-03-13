@@ -130,7 +130,7 @@
             </objects>
             <point key="canvasLocation" x="928.98550724637687" y="75"/>
         </scene>
-        <!--All Courses-->
+        <!--Courses-->
         <scene sceneID="V81-ma-wAP">
             <objects>
                 <viewController id="FUk-Ps-8fE" customClass="CoursesViewController" customModule="WestcostEducationLab" customModuleProvider="target" sceneMemberID="viewController">
@@ -197,7 +197,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="All Courses" image="books.vertical" catalog="system" id="681-qd-9YX"/>
-                    <navigationItem key="navigationItem" id="apb-le-kin"/>
+                    <navigationItem key="navigationItem" title="Courses" id="apb-le-kin">
+                        <barButtonItem key="backBarButtonItem" title="Log out" id="5o7-M8-5rM"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="Se4-RF-hKu" id="1l6-Ap-hG2"/>
                         <segue destination="Pq9-h2-WjY" kind="show" identifier="showCourseDetails" id="I3k-Ax-qaI"/>
@@ -272,7 +274,9 @@
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="My Courses" image="book.circle" catalog="system" id="ssU-Zt-0PF"/>
-                    <navigationItem key="navigationItem" id="v3k-rm-ETd"/>
+                    <navigationItem key="navigationItem" title="My Courses" id="v3k-rm-ETd">
+                        <barButtonItem key="backBarButtonItem" title="Log out" id="aSv-C3-rtL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="u49-nZ-JhD" id="u3v-RU-PIR"/>
                         <segue destination="Pq9-h2-WjY" kind="show" identifier="showMyCourseDetails" id="Qg1-Er-h58"/>
@@ -517,16 +521,19 @@
             </objects>
             <point key="canvasLocation" x="929" y="810"/>
         </scene>
-        <!--Navigation Controller-->
+        <!--Courses-->
         <scene sceneID="zte-2O-DeO">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="BS5-Gx-e7P" sceneMemberID="viewController">
+                <navigationController title="Courses" automaticallyAdjustsScrollViewInsets="NO" id="BS5-Gx-e7P" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="DiJ-5z-Cwz">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
+                    <toolbar key="toolbar" opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="Pc4-K2-dxc">
+                        <autoresizingMask key="autoresizingMask"/>
+                    </toolbar>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="9Ua-5R-HLZ"/>
                     </connections>
@@ -557,7 +564,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="Qg1-Er-h58"/>
+        <segue reference="I3k-Ax-qaI"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>

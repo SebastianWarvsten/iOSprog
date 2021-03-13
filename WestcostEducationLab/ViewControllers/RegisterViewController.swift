@@ -25,10 +25,10 @@ class RegisterViewController: UIViewController {
         view.addGestureRecognizer(tapGesture)
     }
     
-    //MARK: If user.email already excist show error message "User 'email' already excist"
     @IBAction func exitButton(_ sender: UIButton) {
             self.dismiss(animated: true, completion: nil)
     }
+    
     @IBAction func registerButton(_ sender: UIButton) {
         let firstName = firstNameTextfield.text
         let lastName = lastNameTextfield.text
@@ -46,11 +46,9 @@ class RegisterViewController: UIViewController {
             return
         }
         
-        //Store data in core data
         let newUser = UserModel(email: email!, firstname: firstName!, lastname: lastName!, password: password!, phonenumber: phoneNumber!)
         save(user: [newUser])
         
-        //Dismiss the popver and show success message
         let myAlert = UIAlertController(title: "Congratulations", message: "Registration successfull!", preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default){ action in
             self.dismiss(animated: true, completion: nil)
@@ -58,6 +56,7 @@ class RegisterViewController: UIViewController {
         myAlert.addAction(okAction)
         self.present(myAlert, animated: true, completion: nil)
     }
+    
     func displayAlertMessage(message: String) {
         let myAlert = UIAlertController(title: "Alert", message: message, preferredStyle: UIAlertController.Style.alert)
         let okAction = UIAlertAction(title: "Ok", style: UIAlertAction.Style.default, handler: nil)
@@ -67,12 +66,12 @@ class RegisterViewController: UIViewController {
     
     func save(user: [UserModel]){
         for u in user{
-            let userAcount = UserAccount(context: context)
-            userAcount.email = u.email
-            userAcount.firstname = u.firstname
-            userAcount.lastname = u.lastname
-            userAcount.password = u.password
-            userAcount.phonenumber = Int32(u.phonenumber)
+            let userAccount = UserAccount(context: context)
+            userAccount.email = u.email
+            userAccount.firstname = u.firstname
+            userAccount.lastname = u.lastname
+            userAccount.password = u.password
+            userAccount.phonenumber = Int32(u.phonenumber)
         }
 
         do{
@@ -80,16 +79,6 @@ class RegisterViewController: UIViewController {
             print("New user saved in coreData")
         } catch {
             print("Unable to save!")
-        }
-        
-    }
-    
-    func loadUser(){
-        
-        if let userFromCoreData = try? context.fetch(UserAccount.fetchRequest()) as? [UserAccount]{
-            for u in userFromCoreData{
-                let user = UserModel(email: u.email ?? "", firstname: u.firstname ?? "", lastname: u.lastname ?? "", password: u.password ?? "", phonenumber: Int(u.phonenumber))
-            }
         }
     }
 }

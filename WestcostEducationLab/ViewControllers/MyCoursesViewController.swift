@@ -17,7 +17,6 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         setupCoursesList()
         
         tableView.delegate = self

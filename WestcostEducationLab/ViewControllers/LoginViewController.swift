@@ -42,6 +42,7 @@ class LoginViewController: UIViewController {
         if let userFromCoreData = try? context.fetch(UserAccount.fetchRequest()) as? [UserAccount]{
             for u in userFromCoreData{
                 user = UserModel(email: u.email ?? "", firstname: u.firstname ?? "", lastname: u.lastname ?? "", password: u.password ?? "", phonenumber: Int(u.phonenumber))
+                print("\(userFromCoreData)")
             }
         }
     }
