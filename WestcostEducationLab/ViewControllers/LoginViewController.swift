@@ -12,6 +12,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
+    public static var currentUser = UserAccount()
     let context = (UIApplication.shared.delegate as? AppDelegate)!.persistentContainer.viewContext
     
     override func viewDidLoad() {
@@ -34,6 +35,8 @@ class LoginViewController: UIViewController {
                 for u in userCoreData{
                     _ = UserModel(email: u.email ?? "", firstname: u.firstname ?? "", lastname: u.lastname ?? "", password: u.password ?? "", phonenumber: Int(u.phonenumber))
                     if u.email == userEmail && u.password == userPassword{
+                        LoginViewController.currentUser = u
+                        print("currentUser is: \(LoginViewController.currentUser)")
                         print("Congratz you are in")
                         performSegue(withIdentifier: "loginSegue", sender: self)
                         return

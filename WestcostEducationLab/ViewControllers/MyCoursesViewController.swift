@@ -21,7 +21,7 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.delegate = self
         tableView.dataSource = self
-        tableView.addSubview(self.refreshControl)
+//        tableView.addSubview(self.refreshControl)
     }
     
     //Mark: Autorefresh
@@ -31,36 +31,32 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         tableView.reloadData()
     }
     
-    //MARK: Refresh
-    lazy var refreshControl: UIRefreshControl = {
-            let refreshControl = UIRefreshControl()
-            refreshControl.addTarget(self, action:
-                         #selector(MyCoursesViewController.refresh(_:)),
-                                     for: UIControl.Event.valueChanged)
-            refreshControl.tintColor = UIColor.green
-            
-            return refreshControl
-        }()
-    @objc func refresh(_ refreshControl: UIRefreshControl) {
-        courses.removeAll()
-        setupCoursesList()
-        
-        tableView.reloadData()
-        refreshControl.endRefreshing()
-    }
+//    //MARK: Pull to refresh
+//    lazy var refreshControl: UIRefreshControl = {
+//            let refreshControl = UIRefreshControl()
+//            refreshControl.addTarget(self, action:
+//                         #selector(MyCoursesViewController.refresh(_:)),
+//                                     for: UIControl.Event.valueChanged)
+//            refreshControl.tintColor = UIColor.green
+//
+//            return refreshControl
+//        }()
+//    @objc func refresh(_ refreshControl: UIRefreshControl) {
+//        courses.removeAll()
+//        setupCoursesList()
+//
+//        tableView.reloadData()
+//        refreshControl.endRefreshing()
+//    }
     
     //MARK: Setup list of courses from CoreData
     func setupCoursesList(){
 
-        if let coursesFromCoreData = try? context.fetch(UserCourses.fetchRequest()) as? [UserCourses]{
-
-            for c in coursesFromCoreData {
-                let usercourses = UserCourseModel(title: c.title ?? "",
-                                              label: c.subtitle ?? "")
-                courses.append(usercourses)
-                tableView.reloadData()
-            }
-            print("Setting up MyTableView")
+        for kurser in LoginViewController.currentUser.courses ?? []{
+            let currentUserCourses = UserCourseModel(title: (kurser as AnyObject).title ?? "",
+                                                     label: (kurser as AnyObject).subtitle ?? "")
+            courses.append(currentUserCourses)
+            print("Course added to MyCourses")
         }
     }
     
@@ -118,9 +114,9 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
 
             do{
                 try self.context.save()
-                print("Item was successfully deleted from Wishlist")
+                print("Course was successfully deleted from MyCourses")
             } catch {
-                print("Det gick inget bra det här heller")
+                print("Unable to delete course from MyCourses")
             }
             self.courses.remove(at: indexPath.row)
             self.tableView.reloadData()
