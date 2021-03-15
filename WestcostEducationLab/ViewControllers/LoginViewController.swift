@@ -36,7 +36,6 @@ class LoginViewController: UIViewController {
                     _ = UserModel(email: u.email ?? "", firstname: u.firstname ?? "", lastname: u.lastname ?? "", password: u.password ?? "", phonenumber: Int(u.phonenumber))
                     if u.email == userEmail && u.password == userPassword{
                         LoginViewController.currentUser = u
-                        print("currentUser is: \(LoginViewController.currentUser)")
                         print("Congratz you are in")
                         performSegue(withIdentifier: "loginSegue", sender: self)
                         return

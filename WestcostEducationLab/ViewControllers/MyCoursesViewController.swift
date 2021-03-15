@@ -21,7 +21,6 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         
         tableView.delegate = self
         tableView.dataSource = self
-//        tableView.addSubview(self.refreshControl)
     }
     
     //Mark: Autorefresh
@@ -30,24 +29,6 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         setupCoursesList()
         tableView.reloadData()
     }
-    
-//    //MARK: Pull to refresh
-//    lazy var refreshControl: UIRefreshControl = {
-//            let refreshControl = UIRefreshControl()
-//            refreshControl.addTarget(self, action:
-//                         #selector(MyCoursesViewController.refresh(_:)),
-//                                     for: UIControl.Event.valueChanged)
-//            refreshControl.tintColor = UIColor.green
-//
-//            return refreshControl
-//        }()
-//    @objc func refresh(_ refreshControl: UIRefreshControl) {
-//        courses.removeAll()
-//        setupCoursesList()
-//
-//        tableView.reloadData()
-//        refreshControl.endRefreshing()
-//    }
     
     //MARK: Setup list of courses from CoreData
     func setupCoursesList(){
@@ -71,9 +52,7 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let course = courses[indexPath.row]
-        
         let cell = tableView.dequeueReusableCell(withIdentifier: "myCoursesTableViewCell") as! CoursesTableViewCell
-        
         cell.setItem(item: course)
         
         return cell
@@ -96,7 +75,6 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
 
             vc.item = item.1
             vc.itemIndex = item.0
-            
         }
     }
     

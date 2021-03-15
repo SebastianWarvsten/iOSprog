@@ -24,8 +24,8 @@ class CoursesDetailViewController: UIViewController {
 
         titleLabelCourseDetail.text = "\(item.title)"
         textViewDetail.text = "\(item.subtitle)"
-        
     }
+    
     @IBAction func addToWishlistButton(_ sender: UIButton) {
         let course = UserCourseModel(title: self.titleLabelCourseDetail.text!, label: self.textViewDetail.text!)
         save(newCourse: course)
@@ -33,7 +33,6 @@ class CoursesDetailViewController: UIViewController {
     
     func save(newCourse: UserCourseModel) {
         let course = UserCourses(context: context)
-        
         currentUser.addToCourses(course)
         
         course.title = newCourse.title
