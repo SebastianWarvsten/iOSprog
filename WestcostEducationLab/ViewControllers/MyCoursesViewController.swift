@@ -17,7 +17,6 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         
     override func viewDidLoad() {
         super.viewDidLoad()
-        setupCoursesList()
         
         tableView.delegate = self
         tableView.dataSource = self
@@ -25,19 +24,20 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
     
     //Mark: Autorefresh
     override func viewDidAppear(_ animated: Bool) {
-        courses.removeAll()
         setupCoursesList()
-        tableView.reloadData()
     }
     
     //MARK: Setup list of courses from CoreData
     func setupCoursesList(){
 
+        courses.removeAll()
         for kurser in LoginViewController.currentUser.courses ?? []{
             let currentUserCourses = UserCourseModel(title: (kurser as AnyObject).title ?? "",
                                                      label: (kurser as AnyObject).subtitle ?? "")
+            
             courses.append(currentUserCourses)
             print("Course added to MyCourses")
+            tableView.reloadData()
         }
     }
     
