@@ -24,7 +24,7 @@
 		48716F8425E7C8F90001149F /* RegisterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48716F8325E7C8F90001149F /* RegisterViewController.swift */; };
 		48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */; };
 		48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48922E8D25E8FA93008D4CB5 /* UserModel.swift */; };
-		48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */; };
+		48ADDB8E25F2520300B46889 /* WishlistViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 48ADDB8D25F2520300B46889 /* WishlistViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -47,7 +47,7 @@
 		48716F8325E7C8F90001149F /* RegisterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterViewController.swift; sourceTree = "<group>"; };
 		48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		48922E8D25E8FA93008D4CB5 /* UserModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
-		48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCoursesViewController.swift; sourceTree = "<group>"; };
+		48ADDB8D25F2520300B46889 /* WishlistViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WishlistViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 				48922E8225E8E9C9008D4CB5 /* LoginViewController.swift */,
 				487062BD25ED78EE0073B076 /* CoursesViewController.swift */,
 				486D700425F17E9600FBEF7A /* CoursesDetailViewController.swift */,
-				48ADDB8D25F2520300B46889 /* MyCoursesViewController.swift */,
+				48ADDB8D25F2520300B46889 /* WishlistViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -207,7 +207,7 @@
 			files = (
 				485A511125FD448E00ABC438 /* UserCourses+CoreDataProperties.swift in Sources */,
 				485A511325FD448E00ABC438 /* UserAccount+CoreDataProperties.swift in Sources */,
-				48ADDB8E25F2520300B46889 /* MyCoursesViewController.swift in Sources */,
+				48ADDB8E25F2520300B46889 /* WishlistViewController.swift in Sources */,
 				48922E8325E8E9C9008D4CB5 /* LoginViewController.swift in Sources */,
 				486D700525F17E9600FBEF7A /* CoursesDetailViewController.swift in Sources */,
 				48922E8E25E8FA93008D4CB5 /* UserModel.swift in Sources */,

@@ -8,7 +8,7 @@
 import UIKit
 import CoreData
 
-class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class WishlistViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var tableView: UITableView!
     
@@ -52,7 +52,7 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let course = courses[indexPath.row]
-        let cell = tableView.dequeueReusableCell(withIdentifier: "myCoursesTableViewCell") as! CoursesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "wishlistTableViewCell") as! CoursesTableViewCell
         cell.setItem(item: course)
         
         return cell
@@ -63,12 +63,12 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
         let item = courses[indexPath.row]
         let itemTuple = (indexPath.row, item)
         
-        performSegue(withIdentifier: "showMyCourseDetails", sender: itemTuple)
+        performSegue(withIdentifier: "showWishlistDetails", sender: itemTuple)
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
 
-        if segue.identifier == "showMyCourseDetails" {
+        if segue.identifier == "showWishlistDetails" {
 
             guard let vc = segue.destination as? CoursesDetailViewController else { return }
             guard let item = sender as? (Int, UserCourseModel) else { return }
@@ -92,9 +92,9 @@ class MyCoursesViewController: UIViewController, UITableViewDataSource, UITableV
 
             do{
                 try self.context.save()
-                print("Course was successfully deleted from MyCourses")
+                print("Course was successfully deleted from Wishlist")
             } catch {
-                print("Unable to delete course from MyCourses")
+                print("Unable to delete course from Wishlist")
             }
             self.courses.remove(at: indexPath.row)
             self.tableView.reloadData()

@@ -218,7 +218,7 @@
         <!--My Courses-->
         <scene sceneID="uT4-w1-v4G">
             <objects>
-                <viewController id="XoE-cq-GJJ" customClass="MyCoursesViewController" customModule="WestcostEducationLab" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="XoE-cq-GJJ" customClass="WishlistViewController" customModule="WestcostEducationLab" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="H1c-8f-d0E">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -227,7 +227,7 @@
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="myCoursesTableViewCell" rowHeight="113" id="nYd-Xb-nfB" customClass="CoursesTableViewCell" customModule="WestcostEducationLab" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="wishlistTableViewCell" rowHeight="113" id="nYd-Xb-nfB" userLabel="wishlistTableViewCell" customClass="CoursesTableViewCell" customModule="WestcostEducationLab" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="414" height="113"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="nYd-Xb-nfB" id="5xn-Hk-ArD">
@@ -285,7 +285,7 @@
                     </navigationItem>
                     <connections>
                         <outlet property="tableView" destination="u49-nZ-JhD" id="u3v-RU-PIR"/>
-                        <segue destination="Pq9-h2-WjY" kind="show" identifier="showMyCourseDetails" id="Qg1-Er-h58"/>
+                        <segue destination="Pq9-h2-WjY" kind="show" identifier="showWishlistDetails" id="Qg1-Er-h58"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Vm1-IV-Pee" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -1449,7 +1449,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="I3k-Ax-qaI"/>
+        <segue reference="Qg1-Er-h58"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="book.circle" catalog="system" width="128" height="121"/>
