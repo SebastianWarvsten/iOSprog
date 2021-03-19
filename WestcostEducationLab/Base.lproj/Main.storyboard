@@ -141,9 +141,14 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Se4-RF-hKu">
                                 <rect key="frame" x="0.0" y="88" width="414" height="725"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <searchBar key="tableHeaderView" contentMode="redraw" id="tCf-ob-Ovq">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="44"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="coursesTableViewCell" rowHeight="84" id="5cc-Kx-KgK" customClass="CoursesTableViewCell" customModule="WestcostEducationLab" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="28" width="414" height="84"/>
+                                        <rect key="frame" x="0.0" y="72" width="414" height="84"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="5cc-Kx-KgK" id="vcW-Wk-qXO">
                                             <rect key="frame" x="0.0" y="0.0" width="414" height="84"/>
@@ -201,6 +206,7 @@
                         <barButtonItem key="backBarButtonItem" title="Log out" id="5o7-M8-5rM"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="searchBar" destination="tCf-ob-Ovq" id="hkQ-v6-cFx"/>
                         <outlet property="tableView" destination="Se4-RF-hKu" id="1l6-Ap-hG2"/>
                         <segue destination="Pq9-h2-WjY" kind="show" identifier="showCourseDetails" id="I3k-Ax-qaI"/>
                     </connections>
