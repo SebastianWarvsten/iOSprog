@@ -64,9 +64,8 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let course: UserCourseModel!
-        
-        course = filteredCategories[indexPath.row]
+
+        let course = filteredCategories[indexPath.row]
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "coursesTableViewCell") as! CoursesTableViewCell
         cell.setItem(item: course)
@@ -103,7 +102,8 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
             filteredCategories = items
         }else{
             for category in items{
-                if(category.title.contains(searchText)){
+                if(category.title.contains(searchText.lowercased())
+                    || category.title.contains(searchText.uppercased())){
                     filteredCategories.append(category)
                 }
             }
