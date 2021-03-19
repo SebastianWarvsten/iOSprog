@@ -842,11 +842,11 @@
                                             </mask>
                                         </variation>
                                     </textField>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn2-PE-FW3">
-                                        <rect key="frame" x="27" y="143" width="136" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zn2-PE-FW3">
+                                        <rect key="frame" x="27" y="143" width="80" height="20"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="20" id="5GR-kJ-TQp"/>
-                                            <constraint firstAttribute="width" constant="146" id="uZH-Jg-9kz"/>
+                                            <constraint firstAttribute="width" constant="80" id="eiR-2s-Cje"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
@@ -854,17 +854,11 @@
                                         <variation key="default">
                                             <mask key="constraints">
                                                 <exclude reference="5GR-kJ-TQp"/>
-                                                <exclude reference="uZH-Jg-9kz"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="5GR-kJ-TQp"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="uZH-Jg-9kz"/>
                                             </mask>
                                         </variation>
                                     </label>
@@ -1033,32 +1027,23 @@
                                             <action selector="registerButton:" destination="dJH-Yn-0P5" eventType="touchUpInside" id="gnS-Lu-bHG"/>
                                         </connections>
                                     </button>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJG-n0-zyj">
-                                        <rect key="frame" x="27" y="207" width="78" height="20"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Repeat password:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fJG-n0-zyj">
+                                        <rect key="frame" x="27" y="207" width="146" height="20"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="80" id="97p-V1-ht5"/>
                                             <constraint firstAttribute="height" constant="20" id="snS-oz-faJ"/>
-                                            <constraint firstAttribute="height" constant="20" id="vHX-Ck-Vw2"/>
+                                            <constraint firstAttribute="width" constant="146" id="xwW-mf-lJW"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                         <variation key="default">
                                             <mask key="constraints">
-                                                <exclude reference="97p-V1-ht5"/>
                                                 <exclude reference="snS-oz-faJ"/>
-                                                <exclude reference="vHX-Ck-Vw2"/>
                                             </mask>
                                         </variation>
                                         <variation key="heightClass=compact-widthClass=compact">
                                             <mask key="constraints">
                                                 <include reference="snS-oz-faJ"/>
-                                            </mask>
-                                        </variation>
-                                        <variation key="heightClass=compact-widthClass=regular">
-                                            <mask key="constraints">
-                                                <include reference="97p-V1-ht5"/>
-                                                <include reference="vHX-Ck-Vw2"/>
                                             </mask>
                                         </variation>
                                     </label>
