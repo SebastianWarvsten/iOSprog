@@ -102,8 +102,7 @@ extension CoursesViewController: UITableViewDataSource, UITableViewDelegate {
             filteredCategories = items
         }else{
             for category in items{
-                if(category.title.contains(searchText.lowercased())
-                    || category.title.contains(searchText.uppercased())){
+                if(category.title.lowercased().contains(searchText.lowercased())){
                     filteredCategories.append(category)
                 }
             }
