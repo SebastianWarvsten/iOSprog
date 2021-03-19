@@ -22,7 +22,6 @@ class CoursesViewController: UIViewController, UISearchBarDelegate {
     let backCourses = ["REST Api med node.js", "Web Api med .NET Core"]
     let dataCourses = ["Administrera MS SQL Server", "Databas design", "Bygga system med MongoDB", "Vad är ORM? Hur använder man ett sådant verktyg"]
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         items = createArray()
@@ -46,7 +45,7 @@ class CoursesViewController: UIViewController, UISearchBarDelegate {
     func insertAllArrayInfo(course: [String], categoryNumber: Int) -> [UserCourseModel]{
         var tempCourseItem: [UserCourseModel] = []
             for c in course {
-                let courseItem = UserCourseModel(title: categories[categoryNumber], label: c)
+                let courseItem = UserCourseModel(title: categories[categoryNumber], label: c, status: .NoStatus)
                 tempCourseItem.append(courseItem)
             }
         return tempCourseItem

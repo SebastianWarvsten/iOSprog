@@ -2,7 +2,7 @@
 //  UserCourses+CoreDataProperties.swift
 //  WestcostEducationLab
 //
-//  Created by Sebastian Warvsten on 2021-03-13.
+//  Created by Sebastian Warvsten on 2021-03-19.
 //
 //
 
@@ -18,6 +18,7 @@ extension UserCourses {
 
     @NSManaged public var subtitle: String?
     @NSManaged public var title: String?
+    @NSManaged public var status: String?
     @NSManaged public var user: UserAccount?
 
 }

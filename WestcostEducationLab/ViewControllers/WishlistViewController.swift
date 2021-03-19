@@ -1,5 +1,5 @@
 //
-//  MyCoursesViewController.swift
+//  WishlistViewController.swift
 //  WestcostEducationLab
 //
 //  Created by Sebastian Warvsten on 2021-03-05.
@@ -33,10 +33,11 @@ class WishlistViewController: UIViewController, UITableViewDataSource, UITableVi
         courses.removeAll()
         for kurser in LoginViewController.currentUser.courses ?? []{
             let currentUserCourses = UserCourseModel(title: (kurser as AnyObject).title ?? "",
-                                                     label: (kurser as AnyObject).subtitle ?? "")
-            
-            courses.append(currentUserCourses)
-            print("Course added to MyCourses")
+                                                     label: (kurser as AnyObject).subtitle ?? "",
+                                                     status: .Wishlist)
+            if currentUserCourses.status == .Wishlist{
+                courses.append(currentUserCourses)
+            }
             tableView.reloadData()
         }
     }
